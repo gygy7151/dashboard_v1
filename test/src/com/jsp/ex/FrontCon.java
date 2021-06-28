@@ -36,13 +36,16 @@ public class FrontCon extends HttpServlet {
         
         System.out.println("actionDo");
         request.setCharacterEncoding("UTF-8");
+        
         String viewPage = null;
         BCommand command = null;
         System.out.println("모디파이");
+
         String uri = request.getRequestURI();
         String conPath = request.getContextPath();
         String com = uri.substring(conPath.length());
         System.out.println("모디파이2");
+
         if(com.equals("/write_view.do")) {
             viewPage = "write_view.jsp";
         } else if(com.equals("/write.do")) {
